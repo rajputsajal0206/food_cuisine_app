@@ -3,7 +3,8 @@ import 'package:food_cuisine_app/ui/categories.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final theme = ThemeData(
-  colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 131, 57, 0),
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: const Color.fromARGB(255, 131, 57, 0),
     brightness: Brightness.dark,
   ),
   textTheme: GoogleFonts.latoTextTheme(),
@@ -25,5 +26,3 @@ class FoodCuisineApp extends StatelessWidget {
     );
   }
 }
-
-
