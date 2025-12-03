@@ -1,6 +1,6 @@
 import '../models/meals.dart';
 
-const dummyMeals = [
+const mealsData = [
   Meal(
     id: 'm1',
     categories: [
