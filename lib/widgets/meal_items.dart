@@ -37,7 +37,10 @@ class MealItem extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       child: GestureDetector(
         onTap: () {
-          _onSelectMealItem(context,meal);
+          _onSelectMealItem(
+            context,
+            meal,
+          );
         },
         child: Stack(
           children: [
