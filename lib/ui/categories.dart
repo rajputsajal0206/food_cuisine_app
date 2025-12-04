@@ -10,20 +10,6 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          children: [
-            IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () {
-                SystemNavigator.pop(); // go back
-              },
-            ),
-            const SizedBox(width: 4), // 4px space
-            const Text(kCategoriesTitle),
-          ],
-        ),
-      ),
       body: GridView(
         padding: const EdgeInsets.all(16),
         gridDelegate:
