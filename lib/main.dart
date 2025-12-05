@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_cuisine_app/ui/categories.dart';
+import 'package:food_cuisine_app/ui/nav_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 final theme = ThemeData(
@@ -22,7 +23,7 @@ class FoodCuisineApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: theme,
-      home: const CategoriesScreen(),
+      home: const NavBarScreen(),
     );
   }
 }

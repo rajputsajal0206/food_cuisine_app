@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:food_cuisine_app/models/category.dart';
 import 'package:food_cuisine_app/ui/meals_screen.dart';
 import '../data/meals_data.dart';
+import '../models/meals.dart';
 
 class CategoryGrid extends StatelessWidget {
-  const CategoryGrid({
+  CategoryGrid({
     super.key,
     required this.category,
+    required this.onFavouriteToggle,
   });
 
   final Category category;
+  void Function(Meal meal) onFavouriteToggle;
 
   void _selectCategory(BuildContext context) {
     final filteredList = mealsData
@@ -21,6 +24,7 @@ class CategoryGrid extends StatelessWidget {
         builder: (ctx) => MealsScreen(
           title: category.title,
           categoryMeals: filteredList,
+          onFavouriteToggle: onFavouriteToggle,
         ),
       ),
     );

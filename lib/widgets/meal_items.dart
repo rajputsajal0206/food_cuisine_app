@@ -5,7 +5,11 @@ import 'package:food_cuisine_app/widgets/meal_meta_trait.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({super.key, required this.meal});
+  MealItem({
+    super.key,
+    required this.meal,
+    required this.onFavouriteToggle,
+  });
 
   final Meal meal;
 
@@ -19,10 +23,15 @@ class MealItem extends StatelessWidget {
         meal.affordability.name.substring(1);
   }
 
+  void Function(Meal meal) onFavouriteToggle;
+
   void _onSelectMealItem(BuildContext context, Meal meal) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => MealDetailsScreen(meal: meal),
+        builder: (ctx) => MealDetailsScreen(
+          meal: meal,
+          onFavouriteToggle: onFavouriteToggle,
+        ),
       ),
     );
   }
