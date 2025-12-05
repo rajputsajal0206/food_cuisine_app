@@ -33,16 +33,19 @@ class _NavBarScreenState extends State<NavBarScreen> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     String appBarTitle = 'Categories';
-    Widget activeWidget = CategoriesScreen();
+    Widget activeWidget = CategoriesScreen(
+      onFavouriteToggle: _toggleFavouriteStae,
+    );
 
     if (currentTab == 1) {
-      activeWidget =
-          MealsScreen(title: 'Favourites', categoryMeals: _favouriteMeal);
-      appBarTitle= 'Favourites';
+      activeWidget = MealsScreen(
+        categoryMeals: _favouriteMeal,
+        onFavouriteToggle: _toggleFavouriteStae,
+      );
+      appBarTitle = 'Favourites';
     }
 
     return Scaffold(

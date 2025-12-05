@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:food_cuisine_app/widgets/category_grid.dart';
-import '../utility/utility_constants.dart';
+import '../models/meals.dart';
 import '../data/category_data.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({super.key});
+  CategoriesScreen({super.key, required this.onFavouriteToggle});
+  void Function(Meal meal) onFavouriteToggle;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +17,7 @@ class CategoriesScreen extends StatelessWidget {
         children: categoriesList
             .map((cat) => CategoryGrid(
                   category: cat,
+                  onFavouriteToggle: onFavouriteToggle,
                 ))
             .toList(),
       ),
