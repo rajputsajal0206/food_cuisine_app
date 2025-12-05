@@ -21,8 +21,11 @@ class MealsScreen extends StatelessWidget {
     final theme = Theme.of(context);
     return categoryMeals.isEmpty
         ? Padding(
-          padding: const EdgeInsets.only(left: 16,right: 16,),
-          child: Center(
+            padding: const EdgeInsets.only(
+              left: 16,
+              right: 16,
+            ),
+            child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -44,7 +47,7 @@ class MealsScreen extends StatelessWidget {
                 ],
               ),
             ),
-        )
+          )
         : Scaffold(
             appBar: title != null
                 ? AppBar(
