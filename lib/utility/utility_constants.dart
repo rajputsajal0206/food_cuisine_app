@@ -1,1 +1,2 @@
-const String kCategoriesTitle = 'Pick Your Category';
+const String kMeal = 'meals';
+const String kFilters = 'filters';
