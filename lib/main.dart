@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_cuisine_app/ui/categories.dart';
 import 'package:food_cuisine_app/ui/nav_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 

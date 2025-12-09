@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_cuisine_app/models/meals.dart';
 import 'package:food_cuisine_app/ui/categories.dart';
+import 'package:food_cuisine_app/widgets/filters_drawer.dart';
 import 'meals_screen.dart';
 
 class NavBarScreen extends StatefulWidget {
@@ -33,6 +34,13 @@ class _NavBarScreenState extends State<NavBarScreen> {
     });
   }
 
+  void _drawerOptionSelect(String drawerOption) {
+    if (drawerOption == 'filters') {
+    } else if (drawerOption == 'meals') {
+      Navigator.of(context).pop();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     String appBarTitle = 'Categories';
@@ -55,6 +63,9 @@ class _NavBarScreenState extends State<NavBarScreen> {
         ),
       ),
       body: activeWidget,
+      drawer: FiltersDrawer(
+        onDrawerOtionTap: _drawerOptionSelect,
+      ),
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentTab,
           onTap: (index) {
